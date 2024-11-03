@@ -77,9 +77,10 @@ while True:
                 totalCount.append(id)
                 cv.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (0, 255, 0), 5)
         
-        cv.putText(frame, str(len(totalCount)), (255, 100), cv.FONT_HERSHEY_PLAIN, 5, (0, 0, 0), 8)
+    cv.putText(frame, str(len(totalCount)), (255, 100), cv.FONT_HERSHEY_PLAIN, 5, (0, 0, 0), 8)
     
     cv.imshow("Car Race", frame)
+  
     if cv.waitKey(1) & 0xFF==ord('q'):
         break
 
