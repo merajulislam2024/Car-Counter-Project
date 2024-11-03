@@ -70,7 +70,7 @@ while True:
         cvzone.putTextRect(frame, f"{id}", (max(0, x1), max(35, y1)), scale=2, thickness=1)
         
         cx, cy = x1+w//2, y1+h//2
-        cv.circle(frame, (cx, cy), 5, (255, 0, 255), cv.FILLED)
+        # cv.circle(frame, (cx, cy), 5, (255, 0, 255), cv.FILLED)
         
         if limits[0] < cx < limits[2] and limits[1]-15 < cy < limits[1]+15:
             if id not in totalCount:
