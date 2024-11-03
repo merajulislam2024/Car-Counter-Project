@@ -58,7 +58,7 @@ while True:
                 detection = np.vstack((detection, currentArray))
     
     trackerResult = tracker.update(detection)
-    cv.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (255, 255, 255), 5)
+    # cv.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (255, 255, 255), 5)
     
     for result in trackerResult:
         x1, y1, x2, y2, id = result
@@ -75,7 +75,7 @@ while True:
         if limits[0] < cx < limits[2] and limits[1]-15 < cy < limits[1]+15:
             if id not in totalCount:
                 totalCount.append(id)
-                cv.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (0, 255, 0), 5)
+                # cv.line(frame, (limits[0], limits[1]), (limits[2], limits[3]), (0, 255, 0), 5)
         
     cv.putText(frame, str(len(totalCount)), (255, 100), cv.FONT_HERSHEY_PLAIN, 5, (0, 0, 0), 8)
     
